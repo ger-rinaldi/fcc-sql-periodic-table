@@ -32,3 +32,7 @@ WHERE p.type = t.type;
 
 ALTER TABLE properties DROP COLUMN type;
 ALTER TABLE properties ALTER COLUMN type_id SET NOT NULL;
+
+INSERT INTO elements(atomic_number, name, symbol) VALUES (9, 'Fluorine', 'F'), (10, 'Neon', 'Ne');
+INSERT INTO properties(atomic_number, atomic_mass, melting_point_celsius, boiling_point_celsius, type_id) 
+VALUES (9, 18.998, -220, -188.1, 3), (10, 20.18, -248.6, -246.1, 3);
