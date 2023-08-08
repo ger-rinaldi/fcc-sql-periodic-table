@@ -1,5 +1,16 @@
 #! /bin/bash
 
+function QUERY_ALL_INFO() {
+
+  FIELD=$1
+  VALUE=$2
+
+  ALL_INFO=$($PSQL "SELECT e.atomic_number, e.name, e.symbol, t.type, p.atomic_mass, p.melting_point_celsius, p.boiling_point_celsius \
+  FROM elements AS e INNER JOIN properties AS p USING(atomic_number) \
+  INNER JOIN types AS t USING(type_id) WHERE $FIELD = '$VALUE'")
+
+}
+
 function VALIDATE_QUERY_VALUE() {
 
   FIELD=$1
