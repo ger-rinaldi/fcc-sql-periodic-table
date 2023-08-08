@@ -1,5 +1,13 @@
 #! /bin/bash
 
+function VALIDATE_QUERY_VALUE() {
+
+  FIELD=$1
+  VALUE=$2
+
+  IS_VALID_VALUE=$($PSQL "SELECT 1 FROM elements WHERE $FIELD = '$VALUE'")
+}
+
 function GET_QUERY_FIELD() {
   re_number="^[0-9]+$"
   re_symbol="^[A-Z][a-z]{0,2}$"
