@@ -1,4 +1,4 @@
-# Salon Appointment Manager Project
+# Periodic Table Database Project
 
 Welcome to my Periodic Table project! This project is part of the FreeCodeCamp Relational Database Certification. The goal of this project is to demonstrate my proficiency in both BASH scripting and PostgreSQL database management by correcting schemas and data within the database and elaborating a script that queries relevant information from it. It also put's to test the git acquired knowledge from previous courses/tutorials.
 
