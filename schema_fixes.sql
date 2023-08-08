@@ -22,3 +22,6 @@ CREATE TABLE types(
 
 INSERT INTO types(type) SELECT DISTINCT(type) FROM properties;
 INSERT INTO types(type) VALUES ('halogens'), ('noble gases'), ('alkali metals');
+
+ALTER TABLE properties ADD COLUMN type_id INT;
+ALTER TABLE properties ADD CONSTRAINT prop_type_dk FOREIGN KEY (type_id) REFERENCES types(type_id);
