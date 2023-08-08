@@ -29,3 +29,6 @@ ALTER TABLE properties ADD CONSTRAINT prop_type_dk FOREIGN KEY (type_id) REFEREN
 UPDATE properties AS p SET type_id = t.type_id
 FROM types AS t
 WHERE p.type = t.type;
+
+ALTER TABLE properties DROP COLUMN type;
+ALTER TABLE properties ALTER COLUMN type_id SET NOT NULL;
