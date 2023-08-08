@@ -1,4 +1,21 @@
 #! /bin/bash
+
+function GET_QUERY_FIELD() {
+  re_number="^[0-9]+$"
+  re_symbol="^[A-Z][a-z]{0,2}$"
+
+  if [[ $USER_INPUT =~ $re_number ]]
+  then
+    FIELD_TO_QUERY="atomic_number"
+  elif [[ $USER_INPUT =~ $re_symbol ]]
+  then
+    FIELD_TO_QUERY="symbol"
+  else
+    FIELD_TO_QUERY="name"
+  fi
+
+}
+
 PSQL='psql -U freecodecamp -d periodic_table --tuples-only --no-align --csv  -c'
 
 USER_INPUT=$1
