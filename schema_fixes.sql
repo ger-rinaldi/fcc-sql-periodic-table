@@ -11,3 +11,6 @@ ALTER TABLE elements ADD CONSTRAINT uniq_name UNIQUE (name);
 
 ALTER TABLE elements ALTER COLUMN symbol SET NOT NULL;
 ALTER TABLE elements ALTER COLUMN name SET NOT NULL;
+
+ALTER TABLE properties ADD CONSTRAINT elmnt_prop_atomnum_fk
+FOREIGN KEY (atomic_number) REFERENCES elements(atomic_number);
