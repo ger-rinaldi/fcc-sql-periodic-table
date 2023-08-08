@@ -6,7 +6,7 @@ Welcome to my Periodic Table project! This project is part of the FreeCodeCamp R
 
 This project focuses on understanding SQL datatypes and correcting the already existing schemas, creating a Bash script that interacts with a PostgreSQL database to retrieve some data and GIT usage.
 
-As the previous project (Salon Appointment Management) I decided to create a local repo to keep track of changes, so that the history of changes can be accessed to keep better track of the project's progress, which is not the same repository used in CodeAlly's VM.
+As the previous project (Salon Appointment Management) I decided to create a local repo to keep track of changes, so that the history of changes can be accessed to keep better track of the project's progress, which is not the same repository used in CodeAlly's VM. That's why almost no commit will deal with fixes and refactoring.
 
 ## Abilities and Concepts Demonstrated
 
