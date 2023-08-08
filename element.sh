@@ -35,6 +35,19 @@ function GET_QUERY_FIELD() {
 
 }
 
+function UNPACK_QUERY_RESULT() {
+  QUERY_RESULT=$1
+  INFO_ARRAY=( $(echo $QUERY_RESULT | sed 's/,/ /g') )
+
+  NUMBER="${INFO_ARRAY[0]}"
+  NAME="${INFO_ARRAY[1]}"
+  SYMBOL="${INFO_ARRAY[2]}"
+  TYPE="${INFO_ARRAY[3]}"
+  MASS="${INFO_ARRAY[4]}"
+  MELT="${INFO_ARRAY[5]}"
+  BOIL="${INFO_ARRAY[6]}"
+}
+
 PSQL='psql -U freecodecamp -d periodic_table --tuples-only --no-align --csv  -c'
 
 USER_INPUT=$1
