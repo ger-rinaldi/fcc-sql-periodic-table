@@ -25,3 +25,7 @@ INSERT INTO types(type) VALUES ('halogens'), ('noble gases'), ('alkali metals');
 
 ALTER TABLE properties ADD COLUMN type_id INT;
 ALTER TABLE properties ADD CONSTRAINT prop_type_dk FOREIGN KEY (type_id) REFERENCES types(type_id);
+
+UPDATE properties AS p SET type_id = t.type_id
+FROM types AS t
+WHERE p.type = t.type;
