@@ -14,3 +14,11 @@ ALTER TABLE elements ALTER COLUMN name SET NOT NULL;
 
 ALTER TABLE properties ADD CONSTRAINT elmnt_prop_atomnum_fk
 FOREIGN KEY (atomic_number) REFERENCES elements(atomic_number);
+
+CREATE TABLE types(
+  type_id SERIAL PRIMARY KEY,
+  type VARCHAR(60) NOT NULL 
+);
+
+INSERT INTO types(type) SELECT DISTINCT(type) FROM properties;
+INSERT INTO types(type) VALUES ('halogens'), ('noble gases'), ('alkali metals');
