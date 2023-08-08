@@ -38,3 +38,6 @@ INSERT INTO properties(atomic_number, atomic_mass, melting_point_celsius, boilin
 VALUES (9, 18.998, -220, -188.1, 3), (10, 20.18, -248.6, -246.1, 3);
 
 ALTER TABLE properties ALTER COLUMN atomic_mass TYPE REAL;
+
+DELETE FROM elements WHERE atomic_number = 1000;
+DELETE FROM properties WHERE atomic_number = 1000;
